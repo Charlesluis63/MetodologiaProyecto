@@ -60,7 +60,7 @@ print(len(fechas_ingreso_graduados))
 dic = {"matricula":estudiantes_graduados,"titulo_graduado":titulos_graduados,"fecha_ingreso":fechas_ingreso_graduados,"año_ingreso":año_ingreso_graduado,"fecha_egreso":fechas_egreso_graduados,"termino_ingreso":termino_ingreso_graduado,"termino_egreso":termino_egreso_graduado}
 print(dic)
 
-exporta_Excel(dic,"graduados.xlsx","estudiantes_graduados")
+exporta_Excel(dic,"../Excel_generados/graduados.xlsx","estudiantes_graduados")
 
 
 

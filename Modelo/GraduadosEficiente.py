@@ -24,7 +24,7 @@ termino_ingreso = []
 termino_egreso = []
 
 # Configuramos Pandas y cargamos el archivo correspondiente (en este caso se llama archivo.xlsx)   
-nombre = "graduados.xlsx"
+nombre = "../Excel_generados/graduados.xlsx"
 openfile = xlrd.open_workbook(nombre)
 hoja = openfile.sheet_by_name("estudiantes_graduados")
 for i in range(hoja.nrows):
