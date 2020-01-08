@@ -13,7 +13,6 @@ def exporta_Excel(diccionario,nombre_archivo,nombre_hoja):
     df.to_excel(writer, sheet_name=nombre_hoja)
     writer.save()
 
-
 nombre = "..\\Datos\\datos_fiec_v1.xlsx"
 openfile = xlrd.open_workbook(nombre)
 hoja = openfile.sheet_by_name("datos estudiantes")
@@ -59,7 +58,7 @@ print(len(estudiantes_graduados))
 print (len(titulos_graduados))
 print(len(fechas_ingreso_graduados))
 dic = {"matricula":estudiantes_graduados,"titulo_graduado":titulos_graduados,"fecha_ingreso":fechas_ingreso_graduados,"año_ingreso":año_ingreso_graduado,"fecha_egreso":fechas_egreso_graduados,"termino_ingreso":termino_ingreso_graduado,"termino_egreso":termino_egreso_graduado}
-
+print(dic)
 
 exporta_Excel(dic,"graduados.xlsx","estudiantes_graduados")
 
