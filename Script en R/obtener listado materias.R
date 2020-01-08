@@ -1,0 +1,10 @@
+#OBTENER MATERIAS Y CODIGOS
+library(dplyr)
+library(xlsx)
+library(readxl)
+setwd("C:/Users/Charles/Desktop/ESPOL/Semestre 7/Metodología de la Investigacion/Proyecto/Datos")
+datos <- read_excel("datos_fiec_v1.xlsx",sheet = 1)
+datos <- data.frame(datos)
+materias <- distinct(datos,datos$`nombre materia`, datos$codigomateria)
+View(materias)
+write.xlsx(materias,"./listado_materias.xlsx","materias")
