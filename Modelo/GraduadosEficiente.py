@@ -24,7 +24,7 @@ termino_ingreso = []
 termino_egreso = []
 
 # Configuramos Pandas y cargamos el archivo correspondiente (en este caso se llama archivo.xlsx)   
-nombre = "../Excel_generados/graduados.xlsx"
+nombre = "..\\Excel_generados\\graduados.xlsx"
 openfile = xlrd.open_workbook(nombre)
 hoja = openfile.sheet_by_name("estudiantes_graduados")
 for i in range(hoja.nrows):
@@ -44,7 +44,7 @@ def definir_Eficiencia(aingreso,fegreso,tingreso,tegreso,tiempo):
         diferencia = fegreso[i] - aingreso[i]
         t_egreso = tegreso[i]
         t_ingreso = tingreso[i]
-        if((diferencia == tiempo+1 and tingreso[i]!=tegreso[i]) or diferencia==tiempo):
+        if((diferencia == tiempo+1 and tingreso[i]!=tegreso[i]) or diferencia<=tiempo):
             eficiencia.append(1)
         else:
             eficiencia.append(0)
