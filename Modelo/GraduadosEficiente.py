@@ -44,7 +44,7 @@ def definir_Eficiencia(aingreso,fegreso,tingreso,tegreso,tiempo):
         diferencia = fegreso[i] - aingreso[i]
         t_egreso = tegreso[i]
         t_ingreso = tingreso[i]
-        if((diferencia == tiempo+1 and tingreso[i]!=tegreso[i]) or diferencia==tiempo):
+        if((diferencia == tiempo+1 and tingreso[i]!=tegreso[i]) or diferencia<=tiempo):
             eficiencia.append(1)
         else:
             eficiencia.append(0)
