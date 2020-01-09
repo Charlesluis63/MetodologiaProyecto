@@ -14,7 +14,7 @@ def agregar_Excel(diccionario,nombre_archivo,nombre_hoja):
     writer.save()
 
 #Leemos el archivo de los alumnos graduados
-archivoGraduados = "graduados.xlsx"
+archivoGraduados = "..\\Excel_generados\\graduados.xlsx"
 openfileA = xlrd.open_workbook(archivoGraduados)
 hojaGraduados = openfileA.sheet_by_name("estudiantes_graduados")
 
@@ -29,6 +29,7 @@ estado_materias_graduados = []
 nombre_materias_graduados = []
 semestre_año = []
 semestre_termino = []
+semestre = []
 
 #Sacamos las matriculas de los alumnos graduados
 for i in range(hojaGraduados.nrows):
@@ -78,6 +79,6 @@ dic = {"matricula":matriculas_graduados,"nombre_materia":nombre_materias_graduad
 print(dic)
 
 #Agregamos al excel de graduados.xlsx
-agregar_Excel(dic,"graduados.xlsx","materias_graduados")
+agregar_Excel(dic,"..\\Excel_generados\\graduados.xlsx","materias_graduados")
 
 
