@@ -1,0 +1,10 @@
+#OBTENER MATERIAS Y CODIGOS
+library(dplyr)
+library(xlsx)
+library(readxl)
+setwd("C:/Users/Charles/Desktop/ESPOL/Semestre 7/Metodología de la Investigacion/Proyecto/Git/MetodologiaProyecto/Excel_generados")
+datos <- read_excel("graduados.xlsx",sheet = 2)
+View(datos)
+materias <- distinct(datos,datos$nombre_materia)
+View(materias)
+write.xlsx(materias,"./graduados.xlsx","listamaterias_graduados",append = TRUE)
