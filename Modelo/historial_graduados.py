@@ -27,6 +27,7 @@ matriculas_graduados_verificar = []
 matriculas_graduados = []
 estado_materias_graduados = []
 nombre_materias_graduados = []
+codigo_materias_graduados = []
 semestre_año = []
 semestre_termino = []
 semestre = []
@@ -60,9 +61,12 @@ for i in range(hojaHistoria.nrows):
 
         termino = str((hojaHistoria.cell_value(i, 2)))
 
+        codigo = str((hojaHistoria.cell_value(i, 3)))
+
         matriculas_graduados.append(matriculasHistorico[0])
         nombre_materias_graduados.append(nombre_materia)
         estado_materias_graduados.append(estado)
+        codigo_materias_graduados.append(codigo)
         semestre_año.append(año[0])
         semestre_termino.append(termino)
 
@@ -75,7 +79,7 @@ print(semestre_año)
 print(semestre_termino)
 
 #Agregamos a un diccionario
-dic = {"matricula":matriculas_graduados,"nombre_materia":nombre_materias_graduados,"estado_materia":estado_materias_graduados,"año":semestre_año,"termino":semestre_termino}
+dic = {"matricula":matriculas_graduados,"nombre_materia":nombre_materias_graduados,"estado_materia":estado_materias_graduados,"año":semestre_año,"termino":semestre_termino,"codigo materia":codigo_materias_graduados}
 print(dic)
 
 #Agregamos al excel de graduados.xlsx

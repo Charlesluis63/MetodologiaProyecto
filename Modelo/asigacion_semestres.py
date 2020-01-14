@@ -1,4 +1,5 @@
 import pandas as pd
+from openpyxl import load_workbook
 from pandas import ExcelWriter
 import xlrd
 
@@ -37,21 +38,21 @@ for i in range(hojaGraduados.nrows):
             if semestre == semestre_anterior or semestre_anterior=="año-termino":
                 info_semestre = str(semestre_estudiante)+" semestre"
                 semestreAlumno.append(info_semestre)
-                #print("Posicion",i," Matricula actual " + matricula + "-- Semestre actual " + semestre+" Se encuentra en su ",semestre_estudiante," Semestre")
+                print("Posicion",i," Matricula actual " + matricula + "-- Semestre actual " + semestre+" Se encuentra en su ",semestre_estudiante," Semestre")
             else:
                 semestre_estudiante = semestre_estudiante+1
                 info_semestre = str(semestre_estudiante)+" semestre"
                 semestreAlumno.append(info_semestre)
-                #print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
+                print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
         else:
             semestre_estudiante = 1
             info_semestre = str(semestre_estudiante) + " semestre"
             semestreAlumno.append(info_semestre)
-            #print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
+            print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
 
 diccionario = {"Semestre_materia": semestreAlumno}
 print(semestreAlumno)
 
-agrega_Columna(archivoGraduados,"materias_graduados",diccionario,6)
+agrega_Columna(archivoGraduados,"materias_graduados",diccionario,7)
 
 
