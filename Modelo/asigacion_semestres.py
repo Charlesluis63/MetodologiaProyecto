@@ -24,6 +24,7 @@ hojaGraduados = openfileA.sheet_by_name("materias_graduados")
 
 semestreAlumno = []
 semestre_estudiante=1
+creditos_total = 0
 for i in range(hojaGraduados.nrows):
     if i>0:
         matricula = str((hojaGraduados.cell_value(i, 1)))
@@ -33,26 +34,37 @@ for i in range(hojaGraduados.nrows):
         if matricula == matricula_anterior or matricula_anterior=="matricula":
             semestre = str((hojaGraduados.cell_value(i, 4)))+"-"+str((hojaGraduados.cell_value(i, 5)))
             semestre_anterior = str((hojaGraduados.cell_value(i-1, 4)))+"-"+str((hojaGraduados.cell_value(i-1, 5)))
+            creditos = str((hojaGraduados.cell_value(i, 8)))
+            creditos = creditos.split(".")
+            creditos = creditos[0]
             #print("Posicion", i, " Semestre actual " + semestre + "-- Semestre anterior " + semestre_anterior)
 
-            if semestre == semestre_anterior or semestre_anterior=="año-termino":
-                info_semestre = str(semestre_estudiante)+" semestre"
-                semestreAlumno.append(info_semestre)
-                print("Posicion",i," Matricula actual " + matricula + "-- Semestre actual " + semestre+" Se encuentra en su ",semestre_estudiante," Semestre")
+            if str(hojaGraduados.cell_value(i, 5))=="3S":
+                print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en un semestre optativo")
+
             else:
-                semestre_estudiante = semestre_estudiante+1
-                info_semestre = str(semestre_estudiante)+" semestre"
-                semestreAlumno.append(info_semestre)
-                print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
+                if semestre == semestre_anterior or semestre_anterior=="año-termino":
+                    info_semestre = str(semestre_estudiante)+" semestre"
+                    semestreAlumno.append(info_semestre)
+                    creditos_total += int(creditos)
+                    print("Posicion",i," Matricula actual " + matricula + "-- Semestre actual " + semestre+" Se encuentra en su ",semestre_estudiante," Semestre")
+                else:
+                    semestre_estudiante = semestre_estudiante+1
+                    info_semestre = str(semestre_estudiante)+" semestre"
+                    semestreAlumno.append(info_semestre)
+                    print("En este semestre tomó en total ", creditos_total, " créditos\n")
+                    creditos_total=int(creditos)
+                    print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
         else:
             semestre_estudiante = 1
             info_semestre = str(semestre_estudiante) + " semestre"
             semestreAlumno.append(info_semestre)
+            print("En este semestre tomó en total ", creditos_total, " créditos\n")
             print("Posicion", i," Matricula actual " + matricula + "-- Semestre actual " + semestre + " Se encuentra en su ",semestre_estudiante, " Semestre")
 
 diccionario = {"Semestre_materia": semestreAlumno}
 print(semestreAlumno)
 
-agrega_Columna(archivoGraduados,"materias_graduados",diccionario,7)
+#agrega_Columna(archivoGraduados,"materias_graduados",diccionario,7)
 
 

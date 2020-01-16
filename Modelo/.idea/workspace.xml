@@ -11,6 +11,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+<<<<<<< HEAD
         <entry file="file://$PROJECT_DIR$/Reprobados_Por_Codigo.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-63">
@@ -51,6 +52,33 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="294">
               <caret line="41" column="20" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
+=======
+        <entry file="file://$PROJECT_DIR$/CantidadReprobadosPorMateria.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="819">
+              <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/GraduadosEficiente.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="21">
+              <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/asigacion_semestres.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1092">
+              <caret line="55" column="31" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="31" />
+>>>>>>> 94ce985f821ce88b99d4570adebf9066b56a9ad3
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -94,6 +122,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/CargarDatos.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Creditos_Graduados.py" />
         <option value="$PROJECT_DIR$/Creditos_Asignados_Materias_Graduados.py" />
         <option value="$PROJECT_DIR$/../../Repuestos/MetodologiaProyecto/Modelo/Creditos_Graduados.py" />
@@ -101,6 +130,11 @@
         <option value="$PROJECT_DIR$/Reprobados_Por_Codigo.py" />
         <option value="$PROJECT_DIR$/Asignar_Veces_Reprobados.py" />
         <option value="$PROJECT_DIR$/GraduadosEficiente.py" />
+=======
+        <option value="$PROJECT_DIR$/CantidadReprobadosPorMateria.py" />
+        <option value="$PROJECT_DIR$/GraduadosEficiente.py" />
+        <option value="$PROJECT_DIR$/asigacion_semestres.py" />
+>>>>>>> 94ce985f821ce88b99d4570adebf9066b56a9ad3
       </list>
     </option>
   </component>
@@ -287,7 +321,11 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
+<<<<<<< HEAD
       <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+=======
+      <window_info anchor="bottom" id="Find" order="1" />
+>>>>>>> 94ce985f821ce88b99d4570adebf9066b56a9ad3
       <window_info anchor="bottom" id="Run" order="2" weight="0.28805238" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -339,6 +377,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/historial_graduados.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -352,14 +391,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1344">
           <caret line="64" column="33" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="54" />
+=======
+    <entry file="file://$PROJECT_DIR$/CantidadReprobadosPorMateria.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="819">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+>>>>>>> 94ce985f821ce88b99d4570adebf9066b56a9ad3
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CantidadReprobadosPorMateria.py">
+    <entry file="file://$PROJECT_DIR$/asigacion_semestres.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-362">
           <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
         </state>
@@ -415,9 +461,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="163">
           <caret line="45" column="88" selection-start-line="45" selection-start-column="88" selection-end-line="45" selection-end-column="88" />
+=======
+        <state relative-caret-position="1092">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="15" selection-end-line="55" selection-end-column="31" />
+>>>>>>> 94ce985f821ce88b99d4570adebf9066b56a9ad3
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/GraduadosEficiente.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="34" />
         </state>
       </provider>
     </entry>
