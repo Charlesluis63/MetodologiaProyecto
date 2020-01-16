@@ -1,7 +1,7 @@
 import pandas as pd
 from openpyxl import load_workbook
 import pandas.io.formats.excel
-from GraduadosEficiente import agrega_Columna
+from Creditos_Asignados_Por_Semestre import obtenerListas,agrega_Columna
 import numpy as np
 import xlrd
 #Variables a cargar en memoria
@@ -11,7 +11,7 @@ estado_materias = []
 nombre = "../Excel_generados/graduados.xlsx"
 openfile = xlrd.open_workbook(nombre)
 hoja_graduados = openfile.sheet_by_name("materias_graduados")
-hoja_materias = openfile.sheet_by_name("listamaterias_graduados")
+hoja_materias = openfile.sheet_by_name("listamaterias_graduados2")
 
 for i in range(hoja_materias.nrows):
     if (i!=0) :
@@ -39,7 +39,7 @@ for m in range(len(materias)):
                 por_faltas[m]+=1
 
 diccionario = {"aprobados":aprobados,"reprobados":reprobados,"reprobados_por_faltas":por_faltas}
-agrega_Columna(nombre,"listamaterias_graduados",diccionario,2)
+agrega_Columna(nombre,"listamaterias_graduados",diccionario,3)
 
 vale = len(materias_estudiantes)
 print(aprobados.sum() +por_faltas.sum()+ reprobados.sum() == vale)

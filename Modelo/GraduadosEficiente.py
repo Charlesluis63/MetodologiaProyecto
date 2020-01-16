@@ -37,14 +37,13 @@ for i in range(hoja.nrows):
         fecha_egreso.append(fegreso)
         termino_ingreso.append(tingreso)
         termino_egreso.append(tegreso)
-
 def definir_Eficiencia(aingreso,fegreso,tingreso,tegreso,tiempo):
     eficiencia = []
     for i in range(len(aingreso)):
         diferencia = fegreso[i] - aingreso[i]
         t_egreso = tegreso[i]
         t_ingreso = tingreso[i]
-        if((diferencia == tiempo+1 and tingreso[i]!=tegreso[i]) or diferencia<=tiempo):
+        if((diferencia == tiempo+1 and t_ingreso.lower()=='2s' and t_egreso.lower()=='1s') or diferencia<=tiempo):
             eficiencia.append(1)
         else:
             eficiencia.append(0)
