@@ -8,9 +8,8 @@ View(datos)
 datos <- datos[datos$estado_materia == 'RP',]
 nrow(datos)
 table(datos)
-
 dataframe <- data.frame(matriculas = c(datos))
-resultados <- dataframe %>% group_by(matriculas) %>% tally()
+resultados <- dataframe %>% group_by(datos$matricula) %>% tally()
 View(resultados)
 
 write.xlsx(resultados,"./graduados.xlsx","veces_reprobados",append = TRUE)

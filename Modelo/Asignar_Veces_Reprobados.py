@@ -39,4 +39,4 @@ def asignarVecesReprobados(matriculas_reprobados,matriculas_estudiantes_graduado
 valores_asignados = asignarVecesReprobados(matriculas_reprobados,matriculas_estudiantes_graduados,veces_reprobados)
 
 diccionarios = {"veces_reprobado":valores_asignados}
-agrega_Columna(nombre,"estudiantes_graduados",diccionarios,9)
+agrega_Columna(nombre,"estudiantes_graduados",diccionarios,10)
